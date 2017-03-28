@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="psh"/>
+<meta name="copyright" content="psh"/>
+<title>3</title>
+<style>
+*{ padding:0; margin:0; list-style:none;}
+a{ text-decoration:none;}
+#box1 div{ width:200px; height:200px; background:#f90; text-align:center; line-height:200px; font-weight:900; display:none;}
+
+</style>
+<script>
+function changeCity(){
+	var oSel = document.getElementById("sel1");
+	var oBj = document.getElementById("bj");
+	var oSh = document.getElementById("sh");
+	
+	oBj.style.display = "none";
+	oSh.style.display = "none";
+	
+	if(oSel.value == "bj"){
+		oBj.style.display = "block";	
+	}else if(oSel.value == "sh"){
+		oSh.style.display = "block";
+	}
+	else{
+		alert("NO WAY");
+	}
+	
+};
+</script>
+</head>
+
+<body>
+<div id="box1">
+	<select id="sel1" onChange="changeCity()">
+    	<option value="bj">北京</option>
+    	<option value="sh">上海</option>
+    </select>
+	<div id="bj" style="display:block;">
+    	<span>海淀</span>
+        <span>朝阳</span>
+    </div>
+	<div id="sh">
+    	<span>徐汇</span>
+        <span>黄浦</span>
+    </div>
+
+</div>
+</body>
+</html>
