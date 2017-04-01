@@ -1,5 +1,5 @@
 function getStyle(obj,name){
-	return (obj.currentStyle || getComputedStyle(obj,null)[name]);
+	return (obj.currentStyle||getComputedStyle(obj,null))[name];
 }
 function move(obj,json,options){
 	options = options || {};
@@ -28,19 +28,39 @@ function move(obj,json,options){
 					break;
 				case "ease-out":
 					var a = 1 - n/count;
-					var cur = start[name] + dis[name]*(1 - Math.pow(a,3));
-					break;				
+					var cur = start[name] + dis[name]*(1-Math.pow(a,3));
+					break;
 			}
 			if(name == "opacity"){
 				obj.style.opacity = cur;
 				obj.style.filter = "alpha(opacity:"+cur*100+")";
-			}else{
+			} else {
 				obj.style[name] = cur + "px";
-			}	
-			if(n == count){
-				clearInterval(obj.timer);
-				options.complete && options.complete();
 			}
 		}
-	},30);
+		if(n == count){
+			clearInterval(obj.timer);
+			options.complete && options.complete();
+		}
+	},30);	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

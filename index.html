@@ -1,77 +1,232 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"/>
-<meta name="author" content="psh"/>
-<title>index</title>
-<style>
-*{ margin:0; padding:0; list-style:none;}
-#ul1{ width:600px; height:600px; margin:30px auto; position:relative;}
-#ul1 li{ width:150px; height:150px; border:1px solid #000; margin:10px; float:left;}
-#ul1 li img{ width:100%; height:100%;}
-</style>
-<script src="js/move.js"></script>
-<script>
-window.onload = function(){
-	var oUl = document.getElementById("ul1");
-	var oBtn = document.getElementById("btn1");
-	var aLi = oUl.children;
-	var len = aLi.length;
-	var aPos = [];
-	for(var i=0; i<len; i++){
-		aPos[i] = {"left":aLi[i].offsetLeft,"top":aLi[i].offsetTop};
-		aLi[i].style.left = aPos[i].left + "px";
-		aLi[i].style.top = aPos[i].top + "px";
-	}
-	for(var i=0; i<len; i++){
-		aLi[i].style.position = "absolute";
-		aLi[i].style.margin = 0;
-	}
-	var timer = null;
-	oBtn.onclick = function(){
-		var i = 0;
-		clearInterval(timer);
-		timer = setInterval(function(){
-			(function(index){
-				move(aLi[i],{"width":20,"height":20,"opacity":0,"left":0,"top":0},{
-					complete:function(){
-						if(index == len-1){
-							i = len-1;
-							clearInterval(timer);
-							timer = setInterval(function(){
-								move(aLi[i],{"left":aPos[i].left,top:aPos[i].top,width:150,height:150,opacity:1});
-								i--;
-								if(i == -1){
-									clearInterval(timer);
-								}
-							},200);
-						}
-					}
-				})
-				i++;
-				if(i == len){
-					clearInterval(timer);
-				}
-			})(i);
-		},200);
-	};
-
-}; 
-</script>
+	<meta charset="utf-8">
+	<title></title>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet"  href="css/index.css">
+	<script src="js/move.js"></script>
+	<script src="js/addMouseWheel.js"></script>
+	<script src="js/index.js"></script>
 </head>
-
 <body>
-<input id="btn1" type="button" value="收！">
-<ul id="ul1">
-	<li><img src="img/cat/1.jpg"/></li>
-	<li><img src="img/cat/2.jpg"/></li>
-	<li><img src="img/cat/3.jpg"/></li>
-	<li><img src="img/cat/4.jpg"/></li>
-	<li><img src="img/cat/5.jpg"/></li>
-	<li><img src="img/cat/6.jpg"/></li>
-	<li><img src="img/cat/7.jpg"/></li>
-	<li><img src="img/cat/8.jpg"/></li>
-	<li><img src="img/cat/9.jpg"/></li>	
-</ul>
+<div class="container">
+	<div class="st-container" >
+				<ul id="st-nav">
+					<li class="active">
+						<a href="javascript:;">About</a>
+					</li>
+					<li>	
+						<a href="javascript:;">Demos</a>
+					</li>
+					<li>	
+						<a href="javascript:;">Skills</a>
+					</li>
+					<li>
+						<a href="javascript:;">Contact</a>
+					</li>
+					<li>	
+						<a href="javascript:;">Warning</a>
+					</li>
+				</ul>
+				
+				<div class="st-scroll" id="st-scroll">
+					<ol>
+						<li class="" id="st-panel-1" data-icon="2">
+							<div class="st-deco" ></div>
+							<h2>About</h2>
+							<p>HI! My name is Sihan Peng and I am a Front-End Web Developer.Welcome to my website.Please note that I'm using transitions, animation and pseudo-elements which won’t work in some browsers</p>
+						</li>
+						
+						<li class="st-color" id="st-panel-2" data-icon="H">
+							
+							<img src="images/1.jpg" />
+							
+							<div class="st-deco" ></div>
+							<h2>Demos</h2>
+							<div class="demos">
+								<ul class="all-demos">
+				                    <li>
+				                        <a href="javascript/tab/index.html">
+				                            <span class="de-icon">F</span>
+				                            <div class="de-content">
+				                                <h2 class="de-main">选项卡</h2>
+				            
+				                            </div>
+				                        </a>
+				                    </li>
+				                    <li>
+				                        <a href="javascript/gallery/index.html">
+				                            <span class="de-icon">F</span>
+				                            <div class="de-content">
+				                                <h2 class="de-main">散列画廊</h2>
+				                                
+				                            </div>
+				                        </a>
+				                    </li>
+				                    <li>
+				                        <a href="javascript/sliding/index.html">
+				                            <span class="de-icon" id="heart">F</span>
+				                            <div class="de-content">
+				                                <h2 class="de-main">图片浏览</h2>
+				                               
+				                            </div>
+				                        </a>
+				                    </li>
+				                    <li>
+				                        <a href="javascript/3D/index.html">
+				                            <span class="de-icon">F</span>
+				                            <div class="de-content">
+				                                <h2 class="de-main">3D图片环</h2>
+				                               
+				                            </div>
+				                        </a>
+				                    </li>
+				                    <li>
+				                        <a href="javascript/change/index.html">
+				                            <span class="de-icon">F</span>
+				                            <div class="de-content">
+				                                <h2 class="de-main">图片墙</h2>
+				                               
+				                            </div>
+				                        </a>
+				                    </li>
+				                    <li>
+				                        <a href="javascript/grid/index.html">
+				                            <span class="de-icon">F</span>
+				                            <div class="de-content">
+				                                <h2 class="de-main">瀑布流</h2>
+				            
+				                            </div>
+				                        </a>
+				                    </li>
+				                    <li>
+				                        <a href="javascript/clock/index.html">
+				                            <span class="de-icon">F</span>
+				                            <div class="de-content">
+				                                <h2 class="de-main">时钟</h2>
+				            
+				                            </div>
+				                        </a>
+				                    </li>
+				                </ul>
+							</div>
+							
+								
+						</li>
+						
+						<li class="" id="st-panel-3" data-icon="B">
+							<div class="st-deco" ></div>
+							<h2>Skills</h2>
+							<div class="all-skill">
+								<div class="skill">
+	                        
+			                        <strong class="align-center">Html&CSS</strong>
+			                        <div class="bar">
+			                            <span style="width: 80%"></span>
+			                        </div>
+			                        
+			                    </div>
+
+			                    <div class="skill">
+			                        
+			                        <strong class="align-center">Javascript</strong>
+			                        <div class="bar">
+			                            <span style="width: 75%"></span>
+			                        </div>
+			                        
+			                    </div>
+
+			                    <div class="skill">
+			                        
+			                        <strong class="align-center">mySQL</strong>
+			                        <div class="bar">
+			                            <span style="width: 60%"></span>
+			                        </div>
+			                        
+			                    </div>
+
+			                    <div class="skill">
+			                        
+			                        <strong class="align-center">Photoshop</strong>
+			                        <div class="bar">
+			                            <span style="width: 65%"></span>
+			                        </div>
+			                        
+			                    </div>
+
+			                    <div class="skill">
+			                        
+			                        <strong class="align-center">CSS3&HTML5</strong>
+			                        <div class="bar">
+			                            <span style="width: 70%"></span>
+			                        </div>
+			                        
+			                    </div>
+
+			                    <div class="skill">
+			                        
+			                        <strong class="align-center">jQuery</strong>
+			                        <div class="bar">
+			                            <span style="width: 60%"></span>
+			                        </div>
+			                        
+			                    </div>
+
+			                    <div class="skill">
+			                        
+			                        <strong class="align-center">angularJS</strong>
+			                        <div class="bar">
+			                            <span style="width: 50%"></span>
+			                        </div>
+			                        
+			                    </div>
+
+			                    <div class="skill">
+			                        
+			                        <strong class="align-center">nodeJS</strong>
+			                        <div class="bar">
+			                            <span style="width: 40%"></span>
+			                        </div>
+			                        
+			                    </div>
+
+							</div>
+						</li>
+						
+						<li class="st-color" id="st-panel-4" data-icon="x">
+							<div class="st-deco" ></div>
+							<h2>Contact</h2>
+							<div class="contact" id="contact">
+								<div class="button">
+									<a href="javascript:;">
+									</a>
+								</div>
+								<div class="email">
+									<a href="javascript:;">
+									</a>
+									<span>pengsh1011@163.com</span>
+								</div>
+								<div class="phone">
+									<a href="javascript:;">
+									</a>
+									<span>18521552030</span>
+								</div>
+								
+							</div>
+							<p>Do you want to send me a message? Please click here.</p>
+						</li>
+						
+						<li class="" id="st-panel-5" data-icon="Ç">
+							<div class="st-deco" ></div>
+							<h2>Thanks</h2>
+							<p>I hope you liked my website and found it useful. I’ve spent some time playing with JS, so if you have any questions or find some bugs don’t hesitate to tell me. I’m waiting for your feedback in the email. Cheers!</p>
+						</li>
+					</ol>
+
+				</div><!-- // st-scroll -->
+				
+			</div>
+</div>
 </body>
 </html>
