@@ -1,0 +1,33 @@
+.container div.cr-container{
+	width: 600px;
+	height: 400px;
+	position: relative;
+	margin: 0 auto;
+	padding:0;
+	border: 20px solid #fff;
+	background:url(../images/1.jpg)  no-repeat;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+.container div.cr-container span{ 
+	display: block;
+	margin: 0px;
+	padding:0px;
+	position:absolute;
+	left:0;top:0;
+	width:100px; 
+	height:100px; 
+	background:url(../images/0.jpg) no-repeat;
+	background-position:0 0;
+}
+.cr-bgimg{
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+}
+.cr-bgimg{
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}

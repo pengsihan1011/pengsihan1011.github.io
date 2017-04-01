@@ -1,0 +1,152 @@
+*{
+		margin: 0;
+		padding:0;
+		list-style: none;
+		text-decoration: none;
+	}
+
+	body{
+		background: #dafdfc;
+	}
+	#title{
+		width:100%;
+		height: 30px;
+		background: #000;
+		line-height: 30px;
+	}
+	#title .left{
+		float: left;
+		color:#fff;
+		margin-left: 20px;
+	}
+	#title .right{
+		float: right;
+		color:#fff;
+		margin-right: 20px;
+	}
+	h3{
+		margin:20px;
+		font:25px "weiruanyahei";
+		color:rgb(32,85,128);
+	}
+	.pic{
+		width:600px;
+		height:400px;
+		margin:80px 30px; 
+		border:20px solid #fff;
+		background: #ccc;
+		position: relative;
+	}
+	.pic ul{
+		position:relative;
+	}
+	.pic ul li{
+		position: absolute;
+		top:0;left: 0;
+		width:100%;
+		height: 399px;
+		opacity: 0;
+	}
+	.pic ul li img{
+		width: 100%;
+
+	}
+	.pic ol{
+		position: absolute;
+		bottom: 10px;
+		left:50%;
+		width: 350px;
+		height: 50px;
+		margin-left: -175px;
+	}
+	.pic ol li{
+		float:left;
+		width:30px;
+		height: 30px;
+		background: #1c99b0;
+		margin:0 10px;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	.pic ol li.active{
+		float:left;
+		width:30px;
+		height: 30px;
+		background: #fff;
+		margin:0 10px;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	.pic ol li a{
+		display: block;
+		width:30px;
+		height: 30px;
+	}
+	.pic#pic2{
+		position: relative;
+		overflow: hidden;
+	}
+	.pic#pic2 ul{
+		position: absolute;
+		top:0;left:0;
+		
+	}
+	.pic#pic2 ul li{
+		position:relative;
+		opacity: 1;
+	}
+
+
+	.pic#pic3{
+		position: relative;
+		overflow: hidden;
+	}
+	.pic#pic3 p{
+		width:64px;
+		height: 64px;
+		position: absolute;
+		top:50%;
+		margin-top:-32px;
+		z-index: 2;
+	}
+	.pic#pic3 .prev{
+		left: 10px;
+		background: url(img/lr.png) 0 0 no-repeat;
+	}
+	.pic#pic3 .next{
+		right: 10px;
+		background: url(img/lr.png) -43px 0 no-repeat;
+
+	}
+	.pic#pic3 ul{
+		position: absolute;
+		top:0;left:0;
+		
+	}
+	.pic#pic3 ul li{
+		position: relative;
+		float: left;
+		width:600px;
+		opacity: 1;
+	}
+	.pic#pic4{
+		border:none;
+	}
+	.pic#pic4 ul {
+		position:relative;
+		width:600px;
+		height: 399px; 
+		overflow:hidden;
+	}
+
+	.pic#pic4 ul li{
+		position: absolute;
+		left:0;top:0;
+		opacity: 1;
+	}
+	.pic#pic4 ul li span{
+		position:absolute;
+		left:0;top:0;
+		width:20px; 
+		height:100%;
+	}

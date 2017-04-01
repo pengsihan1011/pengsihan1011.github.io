@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>选项卡</title>
+	<link rel="stylesheet"  href="tab.css">
+	<script src="../../js/move.js"></script>
+	<script src="demo1.js"></script>
+	<script src="demo2.js"></script>
+	<script src="demo3.js"></script>
+	<script src="demo4.js"></script>
+	<script>
+	window.onload=function (){
+		demo1("pic");
+		demo2("pic2");
+		demo3("pic3");
+		demo4("pic4");
+
+
+	};
+	</script>
+</head>
+<body>
+<div id="title">
+	<a href="../gallery/index.html" class="left">下一个</a>
+	<a href="../../index.html" class="right">返回主页</a>
+</div>
+<div id="wrap">
+	<h3>1.淡入淡出选项卡</h3>
+	<div class="pic" id="pic">
+
+		<ul>
+			<li style="opacity: 1"><img src="img/1.jpg"/></li>
+			<li><img src="img/2.jpg"/></li>
+			<li><img src="img/3.jpg"/></li>
+			<li><img src="img/4.jpg"/></li>
+			<li><img src="img/5.jpg"/></li>
+			<li><img src="img/6.jpg"/></li>
+			<li><img src="img/7.jpg"/></li>
+		</ul>
+		<ol>
+			<li class="active"><a href="javascript:;" ></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+		</ol>
+	</div>
+	<h3>2.上下自动滑动选项卡(鼠标停留暂停)</h3>
+	<div class="pic" id="pic2">
+
+		<ul>
+			<li><img src="img/1.jpg"/></li>
+			<li><img src="img/2.jpg"/></li>
+			<li><img src="img/3.jpg"/></li>
+			<li><img src="img/4.jpg"/></li>
+			<li><img src="img/5.jpg"/></li>
+			<li><img src="img/6.jpg"/></li>
+			<li><img src="img/7.jpg"/></li>
+		</ul>
+		<ol>
+			<li class="active"><a href="javascript:;" ></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+		</ol>
+	</div>
+	<h3>3.左右无缝滑动选项卡</h3>
+	<div class="pic" id="pic3">
+		<p class="prev"></p>
+    	<p class="next"></p>
+		<ul>
+			<li><img src="img/1.jpg"/></li>
+			<li><img src="img/2.jpg"/></li>
+			<li><img src="img/3.jpg"/></li>
+			<li><img src="img/4.jpg"/></li>
+			<li><img src="img/5.jpg"/></li>
+			<li><img src="img/6.jpg"/></li>
+			<li><img src="img/7.jpg"/></li>
+		</ul>
+		<ol>
+			<li class="active"><a href="javascript:;" ></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+		</ol>
+	</div>
+	<h3>4.手风琴选项卡(鼠标停留展开)</h3>
+	<div class="pic" id="pic4">
+		
+		<ul>
+			<li><img src="img/1.jpg"/><span style="background:#5E3DE0;"></li>
+			<li><img src="img/2.jpg"/><span style="background:#5EDE30;"></li>
+			<li><img src="img/3.jpg"/><span style="background:#f1ef51;"></li>
+			<li><img src="img/4.jpg"/><span style="background:#f17351;"></li>
+			<li><img src="img/5.jpg"/><span style="background:#0EE35D;"></li>
+			<li><img src="img/6.jpg"/><span style="background:#05E3DE;"></li>
+			<li><img src="img/7.jpg"/><span style="background:#DE05E3;"></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
